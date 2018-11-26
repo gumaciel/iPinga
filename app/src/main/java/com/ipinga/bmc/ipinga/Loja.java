@@ -1,7 +1,6 @@
 package com.ipinga.bmc.ipinga;
 
 public class Loja {
-
     private String nome;
     private int imagem;
     private String endereco;

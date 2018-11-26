@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:animateLayoutChanges="true"
-    android:background="@color/colorPrimary"
-    tools:context=".ActivityLogin">
+    android:background="@color/colorPrimary">
 
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -14,29 +11,18 @@
         android:layout_centerInParent="true"
         android:layout_marginRight="40dp"
         android:layout_marginLeft="40dp">
-        
-        <ImageView
-            android:id="@+id/imgView_logo"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:adjustViewBounds="true"
-            android:scaleType="fitCenter"
-            android:src="@drawable/icone" />
-        
+
         <RelativeLayout
-            android:id="@+id/rellay1"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="gone"
-            android:layout_below="@+id/imgView_logo">
+            android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/tv_login"
+                android:id="@+id/tv_register"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:fontFamily="sans-serif"
-                android:text="Entrar"
+                android:text="Cadastrar"
                 android:textColor="@color/white"
                 android:textSize="30sp" />
 
@@ -44,7 +30,7 @@
                 android:id="@+id/linlay1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/tv_login"
+                android:layout_below="@+id/tv_register"
                 android:layout_marginTop="20dp"
                 android:orientation="vertical">
 
@@ -57,12 +43,41 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-smallcaps"
-                        android:text="Usuário"
+                        android:text="Nome"
                         android:textAllCaps="true"
                         android:textColor="@color/white"
                         android:textSize="15sp" />
 
                     <EditText
+                        android:id="@+id/editNomeCad"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/et_bg"
+                        android:fontFamily="sans-serif-smallcaps"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-smallcaps"
+                        android:text="Email"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/editEmailCad"
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:layout_marginTop="5dp"
@@ -90,6 +105,35 @@
                         android:textSize="15sp" />
 
                     <EditText
+                        android:id="@+id/editSenhaCad"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/et_bg"
+                        android:fontFamily="sans-serif-smallcaps"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-smallcaps"
+                        android:text="Confirmar Senha"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/editSenhaConf"
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:layout_marginTop="5dp"
@@ -105,7 +149,7 @@
             </LinearLayout>
 
             <Button
-                android:id="@+id/btn_entrar"
+                android:id="@+id/btn_register"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
                 android:layout_below="@+id/linlay1"
@@ -115,44 +159,13 @@
                 android:paddingLeft="70dp"
                 android:paddingRight="70dp"
                 android:layout_centerHorizontal="true"
-                android:text="Entrar"
+                android:text="Cadastrar"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="16sp" />
 
         </RelativeLayout>
 
-    </RelativeLayout>
-    
-    <RelativeLayout
-        android:id="@+id/rellay2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:visibility="gone">
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/transparent"
-            android:fontFamily="sans-serif"
-            android:text="Cadastrar"
-            android:textAllCaps="true"
-            android:textColor="@color/white" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:background="@color/transparent"
-            android:fontFamily="sans-serif"
-            android:text="Esqueceu a senha?"
-            android:textAllCaps="true"
-            android:textColor="@color/white" />
-
-        
     </RelativeLayout>
 
 </RelativeLayout>

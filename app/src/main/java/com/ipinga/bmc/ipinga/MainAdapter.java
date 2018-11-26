@@ -14,6 +14,7 @@ public class MainAdapter extends ArrayAdapter<Loja> {
 
     private final Context context;
     private final ArrayList<Loja> elementos;
+
     public MainAdapter(Context context, ArrayList<Loja> elementos) {
         super(context, R.layout.linha, elementos);
         this.context = context;
@@ -22,15 +23,19 @@ public class MainAdapter extends ArrayAdapter<Loja> {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+
         LayoutInflater inflater = (LayoutInflater) context
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View rowView = inflater.inflate(R.layout.activity_main, parent, false);
+        View rowView = inflater.inflate(R.layout.linha, parent, false);
+
         TextView nomeLoja = (TextView) rowView.findViewById(R.id.nome);
         TextView endereco = (TextView) rowView.findViewById(R.id.endereco);
         ImageView imagem = (ImageView) rowView.findViewById(R.id.imagem);
+
         nomeLoja.setText(elementos.get(position).getNome());
         endereco.setText(elementos.get(position).getEndereco());
         imagem.setImageResource(elementos.get(position).getImagem());
+
         return rowView;
     }
 }

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#FF2A00</color>
-    <color name="colorPrimaryDark">#FF2A00</color>
+    <color name="colorPrimary">#FFA500</color>
+    <color name="colorPrimaryDark">#FFA500</color>
     <color name="colorAccent">#FFFFFF</color>
 
     <color name="white">#FFFFFF</color>
     <color name="transparent">#00000000</color>
     <color name="gradStart">#19AA8B</color>
-    <color name="gradStop">#FF2A00</color>
+    <color name="gradStop">#FFA500</color>
 </resources>

@@ -63,6 +63,7 @@
                         android:textSize="15sp" />
 
                     <EditText
+                        android:id="@+id/editEmailLogar"
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:layout_marginTop="5dp"
@@ -90,11 +91,13 @@
                         android:textSize="15sp" />
 
                     <EditText
+                        android:id="@+id/editSenhaLogar"
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:layout_marginTop="5dp"
                         android:background="@drawable/et_bg"
                         android:fontFamily="sans-serif-smallcaps"
+                        android:inputType="textPassword"
                         android:paddingLeft="15dp"
                         android:paddingRight="15dp"
                         android:textColor="@color/white"
@@ -105,7 +108,7 @@
             </LinearLayout>
 
             <Button
-                android:id="@+id/btn_entrar"
+                android:id="@+id/btnEntrar"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
                 android:layout_below="@+id/linlay1"

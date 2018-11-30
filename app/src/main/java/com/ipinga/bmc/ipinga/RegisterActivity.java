@@ -1,5 +1,6 @@
 package com.ipinga.bmc.ipinga;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -14,7 +15,7 @@ import com.koushikdutta.ion.Ion;
 public class RegisterActivity extends AppCompatActivity {
 
     private EditText editNomeCad, editEmailCad, editSenhaCad, editSenhaConf;
-    private Button btn_register;
+    private Button btnRegister;
 
     private String HOST = "http://192.168.0.145/login";
 
@@ -28,10 +29,10 @@ public class RegisterActivity extends AppCompatActivity {
         editSenhaCad = (EditText) findViewById(R.id.editSenhaCad);
         editSenhaConf = (EditText) findViewById(R.id.editSenhaConf);
 
-        btn_register = (Button) findViewById(R.id.btn_register);
+        btnRegister = (Button) findViewById(R.id.btnRegister);
 
 
-        btn_register.setOnClickListener(new View.OnClickListener() {
+        btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -63,7 +64,9 @@ public class RegisterActivity extends AppCompatActivity {
                                             if (RETORNO.equals("EMAIL_ERRO")){
                                                 Toast.makeText(RegisterActivity.this, "Ops! Email já cadastrado.", Toast.LENGTH_LONG).show();
                                             } else if (RETORNO.equals("SUCESSO")){
-                                                Toast.makeText(RegisterActivity.this, "Cadastro efetuado com sucesso!", Toast.LENGTH_LONG).show();
+                                                //Toast.makeText(RegisterActivity.this, "Cadastro efetuado com sucesso!", Toast.LENGTH_LONG).show();
+                                                Intent abrePrincipal = new Intent(RegisterActivity.this, MenuActivity.class);
+                                                startActivity(abrePrincipal);
                                             } else {
                                                 Toast.makeText(RegisterActivity.this, "Ops! Ocorreu um erro.", Toast.LENGTH_LONG).show();
                                             }
@@ -78,5 +81,12 @@ public class RegisterActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        finish();
     }
 }

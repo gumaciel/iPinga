@@ -14,7 +14,7 @@ public class Loja {
         return nome;
     }
     
-    //tag 2
+    //tag 3
 
     public void setNome(String nome) {
         this.nome = nome;

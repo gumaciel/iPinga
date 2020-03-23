@@ -13,6 +13,8 @@ public class Loja {
     public String getNome() {
         return nome;
     }
+    
+    //tag 1
 
     public void setNome(String nome) {
         this.nome = nome;
